@@ -1,0 +1,172 @@
+.order-table-80{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.order-table-100{
+    width: 100%;
+}
+
+table{
+    width: 100%;
+    margin-top: 5%;
+}
+tr.thead-dark{
+    border-top: 0.5px solid red;
+}
+th{
+    width: 21%;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+}
+tbody{
+    border-top: 0.5px solid red;
+}
+tbody tr{
+    border-top: 0.5px solid red;
+}
+td{
+    vertical-align: middle !important;
+    width: 14%;
+    padding-left: 40px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+td.avatar{
+    width: 10%;
+}
+
+img.avatar-img{
+    width: 100%;
+}
+
+
+/* nút tăng số lượng  */
+.buttons_added {
+    opacity:1;
+    display:inline-block;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    white-space:nowrap;
+    vertical-align:top;
+    margin-left: 2%;
+}
+.is-form {
+    overflow:hidden;
+    position:relative;
+    background-color:#f9f9f9;
+    width:1.9rem;
+    padding:0;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #ddd;
+}
+.is-form:focus,.input-text:focus {
+    outline:none;
+}
+.is-form.minus {
+    border-radius:4px 0 0 4px;
+}
+.is-form.plus {
+    border-radius:0 4px 4px 0;
+}
+
+.input-qty {
+    background-color:#fff;
+    height:2.2rem;
+    text-align:center;
+    font-size:1rem;
+    display:inline-block;
+    vertical-align:top;
+    margin:0;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    border-left:0;
+    border-right:0;
+    padding:0;
+}
+.input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
+    -webkit-appearance:none;
+    margin:0;
+}
+.p-add{
+    display: inline-block !important;
+    padding: 12px 12px 12px  0px;
+    box-sizing: border-box;
+}
+
+.button-buy{
+    width: 95%;
+    display: inline-block !important;
+    padding: 7px 15px;
+    border: 1px solid white;
+    color: #ffffff;
+    background-color: black;
+    margin-top: 25px;
+    border-radius: 2px;
+    transition: 0.8s;
+}
+.button-buy:hover{
+    width: 95%;
+    display: inline-block !important;
+    padding: 7px 15px;
+    border: 1px solid red;
+    color: black;
+    background-color: white;
+    margin-top: 25px;
+    border-radius: 2px;
+    transition: 0.8s;
+}
+
+/* kết thúc nút tăng số lượng  */
+.order-control-button{
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-top: 1px solid red;
+}
+
+.order-control-button .control-button-left{
+    width: 50%;
+}
+textarea{
+    border-radius: 10px;
+}
+textarea:focus{
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.order-control-button .control-button-right{
+    margin-top: 60px;
+    text-align: right;
+    width: 50%;
+}
+
+.order-control-button .control-button-right p{
+    margin: 0 0 10px;
+}
+
+.btn-order{
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+.btn-order:hover{
+    border: 1px solid red;
+}

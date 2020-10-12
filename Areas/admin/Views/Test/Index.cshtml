@@ -1,0 +1,12 @@
+﻿@model IList<ShopV1.Models.DanhMuc> 
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@foreach(var item in Model)
+{
+    <div>@item.Id</div>
+    <div>@item.Ten</div>
+}

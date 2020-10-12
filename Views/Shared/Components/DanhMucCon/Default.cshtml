@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ShopV1.Models.DanhMuc>
+@{
+    ViewData["Title"] = "Default";
+}
+
+
+<ul>
+    @foreach (var todo in Model)
+    {
+       <li><a href="@Url.Action("Producitem", "Product", new { id = todo.Id })">@todo.Ten</a></li> 
+    }
+</ul>

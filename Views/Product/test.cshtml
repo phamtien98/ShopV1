@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ShopV1.Models.SanPham>
+@{
+    ViewData["Title"] = "test";
+}
+
+<h1>test</h1>
+@foreach (var item in Model)
+{
+
+    <p>@item.TenSanpham</p>
+    <p>@item.GiaSanpham</p>
+}
