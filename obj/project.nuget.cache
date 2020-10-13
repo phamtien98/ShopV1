@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HyYzxm9L8wGVs1jly7eSZJn7vnA3gACYbyqLH8k39C3Ma6pCwRcOi6o9U/YnbhlVy41MlnlRMAyzLqcsmwKkPg==",
+  "dgSpecHash": "fuXH1ogxItuudwxdFZOe8NU5+07cOoV2Lk6OCF02hdEGVcOGc8cGc4joO+vGhEsER7Wx5cj7tWqfCCeTBVeNaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\phamt\\Desktop\\ShopV1\\ShopV1\\ShopV1.csproj",
+  "projectFilePath": "C:\\Users\\phamt\\Desktop\\github\\ShopV1\\ShopV1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phamt\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

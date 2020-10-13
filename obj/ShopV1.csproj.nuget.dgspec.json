@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\phamt\\Desktop\\ShopV1\\ShopV1\\ShopV1.csproj": {}
+    "C:\\Users\\phamt\\Desktop\\github\\ShopV1\\ShopV1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\phamt\\Desktop\\ShopV1\\ShopV1\\ShopV1.csproj": {
+    "C:\\Users\\phamt\\Desktop\\github\\ShopV1\\ShopV1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phamt\\Desktop\\ShopV1\\ShopV1\\ShopV1.csproj",
+        "projectUniqueName": "C:\\Users\\phamt\\Desktop\\github\\ShopV1\\ShopV1.csproj",
         "projectName": "ShopV1",
-        "projectPath": "C:\\Users\\phamt\\Desktop\\ShopV1\\ShopV1\\ShopV1.csproj",
+        "projectPath": "C:\\Users\\phamt\\Desktop\\github\\ShopV1\\ShopV1.csproj",
         "packagesPath": "C:\\Users\\phamt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phamt\\Desktop\\ShopV1\\ShopV1\\obj\\",
+        "outputPath": "C:\\Users\\phamt\\Desktop\\github\\ShopV1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phamt\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -11,13 +11,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" )">
     <link rel="stylesheet" href="@Url.Content("~/css/for-index/reset.css")" type="text/css">
     <link rel="stylesheet" href="@Url.Content("~/css/for-index/index.css")" type="text/css">
     <link rel="stylesheet" href="@Url.Content("~/css/for-index/little.css")" type="text/css">
     <link rel="stylesheet" href="@Url.Content("~/css/for-index/form-modal-regis.css")" type="text/css">
     <link rel="stylesheet" href="@Url.Content("~/css/for-index/modal-product.css")" type="text/css">
-    <link rel="stylesheet" href="@Url.Content("~/css/for-index/modal-search.css")"type="text/css">
+    <link rel="stylesheet" href="@Url.Content("~/css/for-index/modal-search.css")" type="text/css">
     <link rel="stylesheet" href="@Url.Content("~/css/for-index/modal-carbuy.css")" type="text/css">
     <link rel="stylesheet" href="@Url.Content("~/css/for-index/owl/owl.carousel.css")" type="text/css">
     <link rel="stylesheet" href="@Url.Content("~/css/for-index/owl/owl.theme.default.css")" type="text/css">
@@ -104,10 +104,10 @@
                                             {
                                                 <div class="modal-content-list-left">
                                                     <ul class="list-modal2">
-                                                     <li>
+                                                        <li>
                                                             <h2>@item.Ten</h2>
-                                                           
-                                                      </li>
+
+                                                        </li>
                                                         @await Component.InvokeAsync("DanhMucCon", new { id = item.Id })
                                                     </ul>
                                                 </div>
@@ -784,6 +784,7 @@
          page_id="778286239201398">
     </div>
 </body>
+</html>
 <script src="~/js/jquery-3.2.1.js"></script>
 <script src="~/js/index.js"></script>
 <script src="~/js/owl/owl.carousel.js"></script>
@@ -806,4 +807,3 @@
         autoplayHoverPause: true,
     });</script>
 
-</html>

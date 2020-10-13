@@ -2,6 +2,7 @@
 @using Microsoft.AspNetCore.Http
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Detail";
     var image = (IList<ShopV1.Models.AnhSanPham>)ViewBag.img;
     var detail1 = (IList<ShopV1.Models.SanPham>)ViewBag.detail;
@@ -10,7 +11,6 @@
 }
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="@Url.Content("~/css/for-index/owl/owl.theme.default.css")" type="text/css">
     <link rel="stylesheet" href="@Url.Content("~/css/for-sub/product-detail.css")" type="text/css">
     <link rel="stylesheet" href="@Url.Content("~/css/for-index/responsive.css")" type="text/css">
-
     <title href="">Grimm DC</title>
 </head>
 
@@ -75,7 +74,7 @@
                     </div>
                     <!-- end menu respond  -->
                     <!-- logo web khi không respond  -->
-                    <a href="index.html"><img src="img/logo.webp" alt=""></a>
+                    <a href=""><img src="~/img/logo.webp" alt=""></a>
                     <!-- end logo web khi không respond  -->
                     <!-- mobllie shopping bag when respond  -->
                     <div class="mobile-bag-shopping">
@@ -358,17 +357,18 @@
                                 <form action="">
                                     <div class="box">
                                         <p class="display-inline">Màu Sắc:</p>
-                                        @foreach (var mauz in color)
-                                        {
-                                            <div class="circlecheck">
-
-
-                                                @mauz.color
-                                            </div>
-                                        }
-
-
-
+                                        <div class="circlecheck">
+                                            <input type="radio" id="a-option" class="" name="selector-color" checked>
+                                            <label for="a-option">Trắng</label>
+                                        </div>
+                                        <div class="circlecheck">
+                                            <input type="radio" id="b-option" class="" name="selector-color">
+                                            <label for="b-option">Đen</label>
+                                        </div>
+                                        <div class="circlecheck">
+                                            <input type="radio" id="c-option" class="" name="selector-color">
+                                            <label for="c-option">Cam</label>
+                                        </div>
                                     </div>
                                     <div class="box">
                                         <p class="display-inline">Kích Thước:</p>
@@ -405,12 +405,13 @@
                                         <p class="display-inline p-add">Số Lượng:</p>
                                         <div class="buttons_added">
                                             <input class="minus is-form" type="button" value="-">
-                                            <input aria-label="quantity" class="input-qty" max="10" id="@detail.SoLuong" min="1" name="" type="number" value="1">
+                                            <input aria-label="quantity" class="input-qty" max="10" min="1" id="sl" type="number" value="1">
                                             <input class="plus is-form" type="button" value="+">
                                         </div>
                                     </div>
-                                    @Html.ActionLink("Thêm vào giỏ", "AddItem", "CartController", new { @id = HttpContextAccessor.HttpContext.Session.GetInt32("id"), @IdsanPham = detail.MaSanphan, @soluong = detail.SoLuong })
-
+                                    <p class="button-buy">
+                                        @Html.ActionLink("Thêm vào giỏ", "AddItem", "CartController", new { @id = HttpContextAccessor.HttpContext.Session.GetInt32("id"), @IdsanPham = detail.MaSanphan, @soluong = detail.SoLuong })
+                                    </p>
                                     <button class="button-buy">Mua ngay</button>
 
                                 </form>
@@ -435,134 +436,138 @@
                         <div class="footer-info">
                             <div class="footer-info-logo text-align-center">
                                 <a href="">
-                                    <img src="img/ft-logo.webp" alt="">
+                                    <img src="~/img/ft-logo.webp" alt="">
+                                </a>
+                                <div class="ft-address">
+                                    <i class="fa fa-home mr-10"></i>
+                                    <span>Số 141, Chiến Thắng - Hà Đông - Hà Nội</span>
+                                </div>
+                                <div class="ft-hotline">
+                                    <i class="fa fa-phone mr-10" aria-hidden="true"></i>
+                                    <a href="" class="text-black">0947150729</a>
+                                </div>
+                                <div class="ft-email">
+                                    <i class="fa fa-envelope mr-10" aria-hidden="true"></i>
+                                    <a href="" class="text-black">ngoanhduc1999@gmail.com </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item-center">
+                            <div class="footer-menu">
+                                <h3 class="footer-title text-18px">THÔNG TIN</h3>
+                                <ul class="footer-nav-list text-14px">
+
+                                    <li class="mb-15">
+                                        <a href="../Index/index.html" class="text-black">Grimm DC</a>
+                                    </li>
+
+                                    <li class="mb-15">
+                                        <a href="../Index/intro.html" class="text-black">Giới thiệu</a>
+                                    </li>
+
+                                    <li class="mb-15">
+                                        <a href="../Index/ao-tay-ngan.html" class="text-black">Sản phẩm</a>
+                                    </li>
+
+                                    <li class="mb-15">
+                                        <a href="../Index/new.html" class="text-black">Tin tức</a>
+                                    </li>
+
+                                    <li class="mb-15">
+                                        <a href="../Index/contact.html" class="text-black">Liên hệ</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="grid-item-right">
+                            <div class="footer-menu">
+                                <h3 class="footer-title text-18px">HỖ TRỢ KHÁCH HÀNG</h3>
+                                <ul class="footer-nav-list text-14px">
+
+                                    <li class="mb-15">
+                                        <a href="../Index/huong-dan-mua-hang.html" class="text-black">Hướng dẫn mua hàng</a>
+                                    </li>
+
+                                    <li class="mb-15">
+                                        <a href="../Index/huong-dan-thanh-toan.html" class="text-black">Hướng dẫn thanh toán</a>
+                                    </li>
+
+                                    <li class="mb-15">
+                                        <a href="../Index/chinh-sach-bao-mat.html" class="text-black">Chính sách bảo mật</a>
+                                    </li>
+
+                                    <li class="mb-15">
+                                        <a href="../Index/giao-hang.html" class="text-black">
+                                            Giao hàng và vận
+                                            chuyển
+                                        </a>
+                                    </li>
+
+                                    <li class="mb-15">
+                                        <a href="../Index/doi-tra.html" class="text-black">Chính sách đổi trả</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-social-right">
+                        <div class="footer-social text-align-center">
+                            <h4 class="footer-title text-18px">
+                                CHÚNG TÔI TRÊN MẠNG XÃ HỘI
+                            </h4>
+                            <div class="list-social-network">
+
+                                <a href="https://www.facebook.com/grimmdcvietnam/" class="social-icon">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+
+
+                                <a href="https://www.instagram.com/grimmdc.official/" class="social-icon">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+
+
+                                <a href="https://www.youtube.com/channel/UCkuQ9XY5PEDQmGYX9ceIexg" class="social-icon">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
                                 </a>
                             </div>
-                            <div class="ft-address">
-                                <i class="fa fa-home mr-10"></i>
-                                <span>Số 141, Chiến Thắng - Hà Đông - Hà Nội</span>
-                            </div>
-                            <div class="ft-hotline">
-                                <i class="fa fa-phone mr-10" aria-hidden="true"></i>
-                                <a href="" class="text-black">0947150729</a>
-                            </div>
-                            <div class="ft-email">
-                                <i class="fa fa-envelope mr-10" aria-hidden="true"></i>
-                                <a href="" class="text-black">ngoanhduc1999@gmail.com </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item-center">
-                        <div class="footer-menu">
-                            <h3 class="footer-title text-18px">THÔNG TIN</h3>
-                            <ul class="footer-nav-list text-14px">
-
-                                <li class="mb-15">
-                                    <a href="../Index/index.html" class="text-black">Grimm DC</a>
-                                </li>
-
-                                <li class="mb-15">
-                                    <a href="../Index/intro.html" class="text-black">Giới thiệu</a>
-                                </li>
-
-                                <li class="mb-15">
-                                    <a href="../Index/ao-tay-ngan.html" class="text-black">Sản phẩm</a>
-                                </li>
-
-                                <li class="mb-15">
-                                    <a href="../Index/new.html" class="text-black">Tin tức</a>
-                                </li>
-
-                                <li class="mb-15">
-                                    <a href="../Index/contact.html" class="text-black">Liên hệ</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grid-item-right">
-                        <div class="footer-menu">
-                            <h3 class="footer-title text-18px">HỖ TRỢ KHÁCH HÀNG</h3>
-                            <ul class="footer-nav-list text-14px">
-
-                                <li class="mb-15">
-                                    <a href="../Index/huong-dan-mua-hang.html" class="text-black">Hướng dẫn mua hàng</a>
-                                </li>
-
-                                <li class="mb-15">
-                                    <a href="../Index/huong-dan-thanh-toan.html" class="text-black">Hướng dẫn thanh toán</a>
-                                </li>
-
-                                <li class="mb-15">
-                                    <a href="../Index/chinh-sach-bao-mat.html" class="text-black">Chính sách bảo mật</a>
-                                </li>
-
-                                <li class="mb-15">
-                                    <a href="../Index/giao-hang.html" class="text-black">
-                                        Giao hàng và vận
-                                        chuyển
-                                    </a>
-                                </li>
-
-                                <li class="mb-15">
-                                    <a href="../Index/doi-tra.html" class="text-black">Chính sách đổi trả</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-social-right">
-                    <div class="footer-social text-align-center">
-                        <h4 class="footer-title text-18px">
-                            CHÚNG TÔI TRÊN MẠNG XÃ HỘI
-                        </h4>
-                        <div class="list-social-network">
-
-                            <a href="https://www.facebook.com/grimmdcvietnam/" class="social-icon">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-
-
-                            <a href="https://www.instagram.com/grimmdc.official/" class="social-icon">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
-
-
-                            <a href="https://www.youtube.com/channel/UCkuQ9XY5PEDQmGYX9ceIexg" class="social-icon">
-                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="footer-copyright text-align-center">
             <a target="_blank" href="http://grimmdc.vn">© 2020 TEAM 28 THIS IS NOT FOR COPY RIGHT</a>
         </div>
     </footer>
 </body>
-<script src="js/jquery-3.2.1.js"></script>
-<script src="js/index.js"></script>
-<script>
-    $('input.input-qty').each(function () {
-        var $this = $(this),
-            qty = $this.parent().find('.is-form'),
-            min = Number($this.attr('min')),
-            max = Number($this.attr('max'))
-        if (min == 0) {
-            var d = 0
-        } else d = min
-        $(qty).on('click', function () {
-            if ($(this).hasClass('minus')) {
-                if (d > min) d += -1
-            } else if ($(this).hasClass('plus')) {
-                var x = Number($this.val()) + 1
-                if (x <= max) d += 1
-            }
-            $this.attr('value', d).val(d)
-        })
-    })
-</script>
 </html>
+<script src="~/css/js/jquery-3.2.1.js"></script>
+<script src="~/css/js/index.js"></script>
+@section scripts {
+    @*Viết js thì tất cả nằm trong 1 cái thẻ section scripts này*@
+    <script>
+        $('input.input-qty').each(function () {
+            var $this = $(this),
+                qty = $this.parent().find('.is-form'),
+                min = Number($this.attr('min')),
+                max = Number($this.attr('max'))
+            if (min == 0) {
+                var d = 0
+                console.log(d)
+            } else d = min
+            $(qty).on('click', function () {
+                if ($(this).hasClass('minus')) {
+                    if (d > min) d += -1
+                } else if ($(this).hasClass('plus')) {
+                    var x = Number($this.val()) + 1
+                    if (x <= max) d += 1
+                }
+                $this.attr('value', d).val(d)
+            })
+        })
+    </script>
+}
+
